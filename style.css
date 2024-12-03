@@ -1,0 +1,53 @@
+/* Basic styles for the escape room theme */
+body {
+    background-color: #2c2c2c;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 50px;
+    color: #ff5733; /* Fiery orange-red color */
+}
+
+p {
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+button {
+    background-color: #ff5733;
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+button:hover {
+    background-color: #d44629; /* Darker red on hover */
+}
+
+.hint {
+    font-size: 1em;
+    margin-top: 30px;
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Add some fiery animation for effect */
+@keyframes fire {
+    0% { color: #ff5733; }
+    50% { color: #ff8f33; }
+    100% { color: #ff5733; }
+}
+
+h1, p {
+    animation: fire 1.5s infinite;
+}

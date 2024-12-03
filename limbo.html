@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limbo - Escape the Circles of Hell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Limbo</h1>
+        <p class="puzzle-question">There are two ways to uncover the answer. You will need to figure out the correct method.</p>
+        
+        <p>To download the file, hit the button, right click on the .txt document, and choose "Save Page As...".</p>
+        
+        <a href="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1kM1VNWTBRY0hsUSZ0PTExM3M.txt" download="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj1kM1VNWTBRY0hsUSZ0PTExM3M.txt">
+            <button>Download File</button>
+        </a>
+        
+        <p>Once you have the necessary information, enter the name of the person to proceed:</p>
+        
+        <input type="text" id="user-answer" placeholder="Enter the name of the person">
+        <button onclick="checkAnswer()">Submit Answer</button>
+        
+        <p id="feedback"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "gomotion"; // The correct answer (name of the person)
+            const userAnswer = document.getElementById('user-answer').value.trim(); // Get the user's answer
+            
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                document.getElementById('feedback').innerHTML = "Correct! Moving to the next puzzle...";
+                setTimeout(function() {
+                    window.location.href = 'puzzle2.html'; // Redirect to the next puzzle
+                }, 2000); // Delay for 2 seconds before redirecting
+            } else {
+                document.getElementById('feedback').innerHTML = "Incorrect! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>
