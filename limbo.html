@@ -25,7 +25,7 @@
 
     <script>
         function checkAnswer() {
-            const correctAnswer = "gomotion"; // The correct answer (name of the person)
+            const correctAnswer = "gomotion" || "Gomotion"; // The correct answer (name of the person)
             const userAnswer = document.getElementById('user-answer').value.trim(); // Get the user's answer
             
             if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
